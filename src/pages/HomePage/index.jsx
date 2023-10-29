@@ -64,7 +64,7 @@ export const HomePage = () => {
 
    return (
       <>
-         <Header setVisible={setVisible} cartCount={cartList.length} />
+         <Header setVisible={setVisible} cartList={cartList} />
          <main>
             <ProductList
                productList={productList}
