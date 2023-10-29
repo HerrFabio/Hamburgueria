@@ -10,7 +10,7 @@ export const CartItemCard = ({ product, removeFromCart }) => {
             <p>Preço: {product.price.toLocaleString('pt-BR', { style: "currency", currency: "BRL" })}</p>
          </div>
          <button
-            onClick={() => removeFromCart(product)} // Adicione a função para remover o item
+            onClick={() => removeFromCart(product)} // Chame a função para remover o item
             aria-label="delete"
             title="Remover item"
          >
@@ -19,3 +19,4 @@ export const CartItemCard = ({ product, removeFromCart }) => {
       </li>
    );
 };
+

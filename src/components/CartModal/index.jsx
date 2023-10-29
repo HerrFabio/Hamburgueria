@@ -1,11 +1,14 @@
 import { MdClose } from "react-icons/md";
 import { CartItemCard } from "./CartItemCard";
 
-export const CartModal = ({ cartList, setVisible, }) => {
+export const CartModal = ({ cartList, setVisible, removeFromCart, removeAllFromCart }) => {
    const total = cartList.reduce((prevValue, product) => {
       return prevValue + product.totalPrice;
    }, 0);
-   
+
+   const handleRemoveItem = (product) => {
+      removeFromCart(product);
+   }
 
    return (
       <div role="dialog">
@@ -18,9 +21,8 @@ export const CartModal = ({ cartList, setVisible, }) => {
          <div>
             <ul>
                {cartList.map((product) => (
-                  <CartItemCard key={product.id}
-                     product={product} />
-               ))};
+                  <CartItemCard key={product.id} product={product} removeFromCart={handleRemoveItem} />
+               ))}
             </ul>
          </div>
          <div>
@@ -28,8 +30,10 @@ export const CartModal = ({ cartList, setVisible, }) => {
                <span>Total</span>
                <span>{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL" })}</span>
             </div>
-            <button>Remover todos</button>
+            <button onClick={() => removeAllFromCart(null)} /* Adicione a função para remover todos os itens */>Remover todos</button>
          </div>
       </div>
    );
 };
+
+

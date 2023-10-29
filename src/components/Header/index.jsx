@@ -3,6 +3,9 @@ import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
 
 export const Header = ({ setVisible, cartList, productList, setCartList, value, setValue }) => {
+
+   const [searchValue, setSearchValue] = useState("");
+
    // Função para realizar a pesquisa e adicionar produtos correspondentes ao carrinho
    const searchAndAddToCart = () => {
       // Realize a pesquisa e obtenha os produtos correspondentes com base no valor de 'value'
@@ -31,6 +34,15 @@ export const Header = ({ setVisible, cartList, productList, setCartList, value, 
       setValue("");
    };
 
+   const handleFormSubmit = (e) => {
+      e.preventDefault(); // Impede o envio padrão do formulário
+
+      // Chama a função para pesquisar e adicionar ao carrinho
+      searchAndAddToCart();
+
+      setVisible(true);
+   };
+
    // Calcular o número total de itens no carrinho, incluindo itens repetidos
    const totalCartCount = cartList.reduce((total, product) => total + product.quantity, 0);
 
@@ -42,7 +54,7 @@ export const Header = ({ setVisible, cartList, productList, setCartList, value, 
                <MdShoppingCart size={21} />
                <span>{totalCartCount}</span>
             </button>
-            <form>
+            <form onSubmit={handleFormSubmit}>
                <input
                   type="text"
                   value={value}
