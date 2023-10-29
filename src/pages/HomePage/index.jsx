@@ -11,6 +11,7 @@ export const HomePage = () => {
    const [productList, setProductList] = useState([]);
    const [cartList, setCartList] = useState([]);
    const [isVisible, setVisible] = useState(false);
+   const [value, setValue] = useState("");
    
    // useEffect montagem - carrega os produtos da API e joga em productList[Feito]
    
@@ -64,7 +65,8 @@ export const HomePage = () => {
 
    return (
       <>
-         <Header setVisible={setVisible} cartList={cartList} />
+         <Header setVisible={setVisible} cartList={cartList} productList={productList} setCartList={setCartList} value={value} setValue={setValue} />
+
          <main>
             <ProductList
                productList={productList}
