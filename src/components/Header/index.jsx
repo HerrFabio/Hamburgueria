@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
+import styles from "./style.module.scss";
 
 export const Header = ({ setVisible, cartList, productList, setCartList, value, setValue }) => {
 
@@ -47,7 +48,7 @@ export const Header = ({ setVisible, cartList, productList, setCartList, value, 
    const totalCartCount = cartList.reduce((total, product) => total + product.quantity, 0);
 
    return (
-      <header>
+      <header className={styles.headerBox}>
          <img src={Logo} alt="Logo Kenzie Burguer" />
          <div>
             <button onClick={() => setVisible(true)}>

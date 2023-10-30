@@ -3,6 +3,7 @@ import { CartModal } from "../../components/CartModal";
 import { Header } from "../../components/Header";
 import { ProductList } from "../../components/ProductList";
 import { productsApi } from "../../productsApi";
+import styles from "./style.module.scss";
 
 export const HomePage = () => {
    const [productList, setProductList] = useState([]);
@@ -82,7 +83,7 @@ export const HomePage = () => {
       <>
          <Header setVisible={setVisible} cartList={cartList} productList={productList} setCartList={setCartList} value={value} setValue={setValue} />
 
-         <main>
+         <main className={styles.mainBox}>
             <ProductList
                productList={productList}
                addToCart={addToCart}

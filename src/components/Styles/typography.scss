@@ -1,0 +1,46 @@
+.title {
+    
+    font-family: var(--font-primary);
+    font-style: bold;
+    color: var(--grey-600);
+
+    &.one{
+
+        font-size: 1.625rem;
+        line-height: 2.125rem;
+    }
+
+    &.two {
+        
+        font-size: 1.375rem;
+        line-height: 1.5rem;
+    }
+
+    &.three {
+
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+}
+
+.paragraph {
+
+    font-family: var(--font-primary);
+    font-style: normal;
+    color: var(--grey-300);
+
+    &.one {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    &.two {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
+
+    &.three {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+}
