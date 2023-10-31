@@ -1,4 +1,5 @@
-import { HomePage } from "./pages/HomePage"
+import { HomePage } from "./pages/HomePage";
+import "../src/components/styles/index.scss";
 
 function App() {
   return (
