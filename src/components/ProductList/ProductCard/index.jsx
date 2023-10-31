@@ -1,6 +1,11 @@
+import styles from "./style.module.scss";
+
+
 export const ProductCard = ({ product, addToCart }) => {
+
+
     return (
-        <li>
+        <li className={styles.libox}>
             <img src={product.img} alt={product.name} />
             <div>
                 <h3>{product.name}</h3>

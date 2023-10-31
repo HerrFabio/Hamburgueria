@@ -1,0 +1,11 @@
+.libox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:normal ;
+
+    width: 300px;
+    height: 346px;
+
+    background: var(--color-grey-0, #F5F5F5);
+}
