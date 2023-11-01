@@ -1,7 +1,7 @@
 .title {
     font-family: var(--font-family-primary);
-    font-weight: bold; /* Use font-weight para definir o peso da fonte */
-    color: var(--color-grey-600); /* Use --color-grey-600 em vez de --grey-600 */
+    font-weight: bold; 
+    color: var(--color-grey-600); 
 
     &.one {
         font-size: 1.625rem;
@@ -17,11 +17,20 @@
         font-size: 1.125rem;
         line-height: 1.5rem;
     }
+    
+}
+
+.title2 {
+    font-family: var(--font-family-primary);
+    font-weight: bold; 
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: white;
 }
 
 .paragraph {
     font-family: var(--font-family-primary);
-    font-weight: normal; /* Use font-weight para definir o peso da fonte */
+    font-weight: normal; 
 
     &.one {
         font-size: 1rem;

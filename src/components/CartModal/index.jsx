@@ -12,14 +12,14 @@ export const CartModal = ({ cartList, setVisible, removeFromCart, removeAllFromC
    }
 
    return (
-      <div className={styles.divBox} role="dialog">
-         <div>
+      <div className={styles.fullscreenBackground} role="dialog">
+         <div className={`${styles.headerCard} title2`}>
             <h2>Carrinho de compras</h2>
-            <button onClick={() => setVisible(false)} aria-label="close" title="Fechar">
-               <MdClose size={21} />
+            <button  onClick={() => setVisible(false)} aria-label="close" title="Fechar">
+               <MdClose size={21}/>
             </button>
          </div>
-         <div>
+         <div className={styles.divBox}>
             <ul>
                {cartList.map((product) => (
                   <CartItemCard key={product.id} product={product} removeFromCart={handleRemoveItem} />
