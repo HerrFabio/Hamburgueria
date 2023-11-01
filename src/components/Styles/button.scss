@@ -1,0 +1,20 @@
+.btn {
+
+    display: inline-flex;
+    height: 40px;
+    padding: 0px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px ;
+    
+    border-radius: 8px;
+    border: 2px solid var(--Gray-4, #BDBDBD);
+    background: var(--Gray-4, #BDBDBD);
+
+    cursor: pointer;
+}
+
+.btn:hover {
+
+    background: var(--color-primary-1,  #27AE60);
+}

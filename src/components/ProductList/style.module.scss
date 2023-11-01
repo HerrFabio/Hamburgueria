@@ -1,6 +1,8 @@
 .ulBox {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    
     list-style: none;
-    gap: 1rem;
+    gap: 3rem;
 }

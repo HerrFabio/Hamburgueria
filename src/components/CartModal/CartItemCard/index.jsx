@@ -19,4 +19,3 @@ export const CartItemCard = ({ product, removeFromCart }) => {
       </li>
    );
 };
-

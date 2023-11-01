@@ -1,5 +1,6 @@
 import { MdClose } from "react-icons/md";
 import { CartItemCard } from "./CartItemCard";
+import styles from "./style.module.scss"
 
 export const CartModal = ({ cartList, setVisible, removeFromCart, removeAllFromCart }) => {
    const total = cartList.reduce((prevValue, product) => {
@@ -11,7 +12,7 @@ export const CartModal = ({ cartList, setVisible, removeFromCart, removeAllFromC
    }
 
    return (
-      <div role="dialog">
+      <div className={styles.divBox} role="dialog">
          <div>
             <h2>Carrinho de compras</h2>
             <button onClick={() => setVisible(false)} aria-label="close" title="Fechar">
