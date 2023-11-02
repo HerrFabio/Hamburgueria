@@ -63,4 +63,18 @@
         line-height: 1.5rem;
         font-weight: 600;
     }
+
+    &.six {
+        color: var(--color-grey-600);
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+    }
+
+    &.seven {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        color: var(--color-grey-300);
+        font-weight: 800;
+    }
 }

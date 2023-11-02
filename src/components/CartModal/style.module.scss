@@ -22,12 +22,21 @@
     
     background: var(--color-primary-1, #27AE60);
     width: 38.5vw;
-    height: 3.5625rem;
+    height: 12.5625rem;
     border-radius: 0.625rem 0.625rem 0 0;
     gap: 10rem;
     
     position: relative;
     top: 0.5rem;
+
+    &>button {
+
+        border: none;
+        background: none;
+        color: var(--color-grey-100);
+        font-size: 12px;
+    }
+
 }
 
 .divBox {
@@ -60,5 +69,21 @@
     &>button {
 
         display: flex;
+        width: 94%;
+        height: 3.9375rem;
     }
+}
+
+.divBoxTotal {
+
+    display: flex;
+    justify-content: space-between;
+
+    
+    width: 94%;
+    height: 1rem;
+    
+    padding: 1rem 0 0 0;
+    
+    border-top: 0.125rem solid var(--color-grey-100);
 }

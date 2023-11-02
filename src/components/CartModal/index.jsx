@@ -15,8 +15,8 @@ export const CartModal = ({ cartList, setVisible, removeFromCart, removeAllFromC
       <div className={styles.fullscreenBackground} role="dialog">
          <div className={`${styles.headerCard} title2`}>
             <h2>Carrinho de compras</h2>
-            <button  onClick={() => setVisible(false)} aria-label="close" title="Fechar">
-               <MdClose size={21}/>
+            <button onClick={() => setVisible(false)} aria-label="close" title="Fechar">
+               <MdClose size={21} color="grey-opaque"/>
             </button>
          </div>
          <div className={styles.divBox}>
@@ -27,11 +27,11 @@ export const CartModal = ({ cartList, setVisible, removeFromCart, removeAllFromC
             </ul>
          </div>
          <div className={styles.footerCard}>
-            <div>
-               <span>Total</span>
-               <span>{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL" })}</span>
+            <div className={styles.divBoxTotal}>
+               <span className="paragraph six">Total</span>
+               <span className="paragraph two">{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL" })}</span>
             </div>
-            <button className="btn paragraph five" onClick={() => removeAllFromCart(null)} /* Adicione a função para remover todos os itens */>Remover todos</button>
+            <button className="btn paragraph five" onClick={() => removeAllFromCart(null)}>Remover todos</button>
          </div>
       </div>
    );
