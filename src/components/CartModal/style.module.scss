@@ -18,21 +18,47 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    
     background: var(--color-primary-1, #27AE60);
-    width: 32.8rem;
+    width: 38.5vw;
     height: 3.5625rem;
     border-radius: 0.625rem 0.625rem 0 0;
-    align-items: center;
     gap: 10rem;
+    
     position: relative;
     top: 0.5rem;
 }
 
 .divBox {
     display: flex;
-    background: white;
     border-radius: 0.5rem;
+
+    background: white;
+    
     padding: 1.25rem;
-    width: 484px;
-    height: 351px;
+    
+    width: 35.5vw;
+    height: 100vw;
+}
+
+.footerCard {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 1rem;
+    gap: 1rem;
+
+    border-radius: 0 0 0.5rem 0.5rem;
+    width: 38.5vw;
+    padding-bottom: 1rem;
+
+    background: white;
+
+    &>button {
+
+        display: flex;
+    }
 }

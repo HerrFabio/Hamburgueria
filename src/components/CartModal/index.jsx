@@ -26,12 +26,12 @@ export const CartModal = ({ cartList, setVisible, removeFromCart, removeAllFromC
                ))}
             </ul>
          </div>
-         <div>
+         <div className={styles.footerCard}>
             <div>
                <span>Total</span>
                <span>{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL" })}</span>
             </div>
-            <button onClick={() => removeAllFromCart(null)} /* Adicione a função para remover todos os itens */>Remover todos</button>
+            <button className="btn paragraph five" onClick={() => removeAllFromCart(null)} /* Adicione a função para remover todos os itens */>Remover todos</button>
          </div>
       </div>
    );

@@ -1,3 +1,12 @@
+.liBox {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22rem;
+    margin: 0.75rem;
+}
+
 .divImgBox {
     display: flex;
     justify-content: flex-start;
@@ -31,13 +40,13 @@
 
         display: inline-flex;
         width: 12.5rem;
-        
-    }
-
-    &>button {
-
-        display: flex;align-items: end;
+                
     }
 
 }
 
+li >button {
+
+    background: none;
+    border: none;
+}

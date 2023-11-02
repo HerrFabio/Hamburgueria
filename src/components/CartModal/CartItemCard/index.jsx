@@ -3,7 +3,7 @@ import styles from "./style.module.scss";
 
 export const CartItemCard = ({ product, removeFromCart }) => {
    return (
-      <li>
+      <li className={styles.liBox}> 
          <div className={styles.divImgBox}>
             <img src={product.img} alt={product.name} />
             <div className={styles.divInfoBox}>
@@ -17,7 +17,7 @@ export const CartItemCard = ({ product, removeFromCart }) => {
             aria-label="delete"
             title="Remover item"
          >
-            <MdDelete size={21} />
+            <MdDelete size={21} color="gray-opaque" />
          </button>
       </li>
    );
